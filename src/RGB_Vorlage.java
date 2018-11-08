@@ -62,7 +62,7 @@ public class RGB_Vorlage extends Frame {
 			 RGB rg = new RGB(this.red, this.green, this.blue);
 			 
 			 if(this.blue > this.green && this.blue > this.red) {
-				 rg.alpha = 50;//85
+				 rg.alpha = 85;
 			 }
 			
 			 return rg;
@@ -222,7 +222,7 @@ public class RGB_Vorlage extends Frame {
 			// Determine the type of transparency of the new buffered image
 			int transparency = Transparency.OPAQUE;
 			if (hasAlpha) {
-				transparency = Transparency.BITMASK;
+				transparency = Transparency.TRANSLUCENT;
 			} // if
 
 			// Create the buffered image
