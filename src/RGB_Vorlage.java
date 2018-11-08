@@ -62,7 +62,7 @@ public class RGB_Vorlage extends Frame {
 			 RGB rg = new RGB(this.red, this.green, this.blue);
 			 
 			 if(this.blue > this.green && this.blue > this.red) {
-				 rg.alpha = 85;
+				 rg.alpha = 50;//85
 			 }
 			
 			 return rg;
@@ -195,6 +195,64 @@ public class RGB_Vorlage extends Frame {
 
 		return bimage;
 	} // toBufferedImage
+	
+	/**
+	 * Hilfsmethode zum Konvertieren Image --> BufferedImage mit Alpha-Kanal.
+	 * @param image Zu konvertierendes Bild.
+	 * @return Erzeugtes BufferedImage-Bild.
+	 */
+	public static BufferedImage toBufferedAlphaImage(Image image) {
+		if (image instanceof BufferedImage) {
+			return (BufferedImage) image;
+		}
+
+		// This code ensures that all the pixels in the image are loaded
+		image = new ImageIcon(image).getImage();
+
+		// Determine if the image has transparent pixels; for this method's
+		// implementation
+		boolean hasAlpha = true; //hasAlpha(image);
+
+		// Create a buffered image with a format that's compatible with the
+		// screen
+		BufferedImage bimage = null;
+		GraphicsEnvironment ge = GraphicsEnvironment
+				.getLocalGraphicsEnvironment();
+		try {
+			// Determine the type of transparency of the new buffered image
+			int transparency = Transparency.OPAQUE;
+			if (hasAlpha) {
+				transparency = Transparency.BITMASK;
+			} // if
+
+			// Create the buffered image
+			GraphicsDevice gs = ge.getDefaultScreenDevice();
+			GraphicsConfiguration gc = gs.getDefaultConfiguration();
+			bimage = gc.createCompatibleImage(image.getWidth(null), image
+					.getHeight(null), transparency);
+		} catch (HeadlessException e) {
+			// The system does not have a screen
+		} // catch
+
+		if (bimage == null) {
+			// Create a buffered image using the default color model
+			int type = BufferedImage.TYPE_INT_RGB;
+			if (hasAlpha) {
+				type = BufferedImage.TYPE_INT_ARGB;
+			}
+			bimage = new BufferedImage(image.getWidth(null), image
+					.getHeight(null), type);
+		} // if
+
+		// Copy image to buffered image
+		Graphics g = bimage.createGraphics();
+
+		// Paint the image onto the buffered image
+		g.drawImage(image, 0, 0, null);
+		g.dispose();
+
+		return bimage;
+	} // toBufferedAlphaImage
 
 	/**
 	 * Wandelt Bild in Zahlen-Array um. <br/>Zudem wird die Bild-Breite und
@@ -206,7 +264,7 @@ public class RGB_Vorlage extends Frame {
 	public int[] getRaster(Image img) {
 		int[] arr = new int[0];
 
-		// Warten, bis das Image vollständig geladen ist:
+		// Warten, bis das Image vollstï¿½ndig geladen ist:
 		MediaTracker mt = new MediaTracker(this);
 		mt.addImage(img, 0);
 		try {
@@ -247,7 +305,7 @@ public class RGB_Vorlage extends Frame {
 		MediaTracker mt = new MediaTracker(this);
 		mt.addImage(img, 0);
 		try {
-			//Warten, bis das Image vollständig geladen ist,
+			//Warten, bis das Image vollstï¿½ndig geladen ist,
 			mt.waitForAll();
 		} catch (InterruptedException e) {
 			//nothing
@@ -282,10 +340,8 @@ public class RGB_Vorlage extends Frame {
 	public void saveImageAsPng(Image img, String filename) {
 		try {
 			
-			BufferedImage bufImg = toBufferedImage(img);
-			BufferedImage argbImg = new BufferedImage(bufImg.getWidth(), bufImg.getHeight(), BufferedImage.TYPE_INT_ARGB);
 		    File outputfile = new File(filename);
-		    ImageIO.write(argbImg, "png", outputfile);
+		    ImageIO.write(toBufferedAlphaImage(img), "png", outputfile);
 		    
 		} catch (IOException e) {
 			System.err.println("Fehler beim Datei-Schreiben");
