@@ -76,6 +76,8 @@ public class RGB_Vorlage extends Frame {
 			
 			return new RGB(y, y, y);
 		}
+		
+		
 	
 		
 		/**
@@ -350,6 +352,44 @@ public class RGB_Vorlage extends Frame {
 		System.out.println("Datei " + filename + " ist geschrieben.");
 	} // saveImage
 	
+	
+	public void saveImageAsPgm(Image img, String filename)
+	{
+		try
+		{
+//			File outputfile = new File(filename);
+			PrintWriter out = new PrintWriter(filename);
+			
+			out.println("P2");
+			out.println("1024 768");
+			out.println("255");
+			
+			int[] imgRaster = getRaster(img);
+			RGB rgb = new RGB();
+			int pix;
+			
+			for (int y = 0; y < height; y++)
+			{
+				for (int x = 0; x < width; x++)
+				{
+					pix = imgRaster[y * width + x];
+					rgb.setRGB(pix);
+					int grayscaleValue = rgb.red;
+					out.format("%3d ", grayscaleValue);
+				}
+				out.format("\n");
+			}
+			
+			out.close();
+		}
+		catch (Exception e)
+		{
+			System.err.println("Fehler beim Datei-Schreiben");
+			e.printStackTrace();
+		} // catch
+		System.out.println("Datei " + filename + " ist geschrieben.");
+	}
+	
 
 	/**
 	 * Manipulation eines Bildes.
@@ -373,9 +413,9 @@ public class RGB_Vorlage extends Frame {
 				
 				//rgb = rgb.ignoreBlue();
 				
-				rgb = rgb.makeBlueTransparent();
+//				rgb = rgb.makeBlueTransparent();
 				
-				//rgb = rgb.rgbToYuvGreyscale();
+				rgb = rgb.rgbToYuvGreyscale();
 				
 				
 				
@@ -406,14 +446,19 @@ public class RGB_Vorlage extends Frame {
 //	}
 	
 	
+	
 
 	public static void main(String args[]) {
 		Image img;
 		RGB_Vorlage rgb = new RGB_Vorlage();
 		img = rgb.loadImage("Tulip.jpg");
 		img = rgb.manipulateImage(img);
-		rgb.saveImage(img, "Tulip_neu.jpg");
-		rgb.saveImageAsPng(img, "Tulip_neu.png");
+//		rgb.saveImage(img, "Tulip_neu.jpg");
+//		rgb.saveImageAsPng(img, "Tulip_neu.png");
+		
+		rgb.saveImageAsPgm(img, "Aufgabe4.pgm");
+		
+		
 	} // main
 	
 } // class RGB_Vorlage
