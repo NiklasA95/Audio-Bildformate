@@ -8,7 +8,6 @@
 
 import java.awt.*;
 import java.awt.image.*;
-import java.io.IOException;
 
 import javax.swing.ImageIcon;
 
@@ -47,39 +46,6 @@ public class RGB_Vorlage extends Frame {
 	        blue  = (pix      ) & 0xff;			
 		} // setRGB
 		
-		// Aufgabe 1 
-		public RGB ignoreBlue() {
-			 RGB rg = new RGB();
-			 rg.alpha = this.alpha;
-			 rg.red = this.red;
-			 rg.green = this.green;
-			 rg.blue = 0;
-			return rg;
-		}
-		
-		// Aufgabe 2 
-		public RGB makeBlueTransparent() {
-			 RGB rg = new RGB(this.red, this.green, this.blue);
-			 
-			 if(this.blue > this.green && this.blue > this.red) {
-				 rg.alpha = 85;
-			 }
-			
-			 return rg;
-		}	
-		
-		// Aufgabe 3
-		
-		public RGB rgbToYuvGreyscale() {
-			
-			int y = (int) (0.299 * this.red + 0.587 * this.green + 0.114 * this.blue);
-			
-			return new RGB(y, y, y);
-		}
-		
-		
-	
-		
 		/**
 		 * Wandelt die einzelnen RGB-und Alpha-Komponenten in eine 32-Bit-Zahl um.
 		 * @param red Rot-Wert.
@@ -101,6 +67,27 @@ public class RGB_Vorlage extends Frame {
 		public int toPix(RGB rgb) {
 			return toPix(rgb.red, rgb.green,rgb.blue, rgb.alpha);
 		} // toPix
+		
+		public void ignoreBlue()
+		{
+			this.blue = 0;
+		} // ignoreBlue
+		
+		public void blueToTransparent()
+		{
+			if (this.blue > this.red && this.blue > this.green)
+			{
+				this.alpha = 85;
+			}
+		} // blueToTransparent
+		
+		public void toGrayscale()
+		{
+			int y = (int) (0.299 * this.red + 0.587 * this.green + 0.114 * this.blue);
+			this.red = y;
+			this.green = y;
+			this.blue = y;
+		} // toGrayscale
 		
 	} // class RGB
 	// -----------------------------------------------------------
@@ -124,12 +111,12 @@ public class RGB_Vorlage extends Frame {
 	private int height;
 
 	public RGB_Vorlage() {
-	    super("RGB-Bild");
-	    setBackground(Color.lightGray);
-	    setSize(1200,1000);
-	    setVisible(true);
-	    //WindowListener
-	    addWindowListener(new WindowClosingAdapter(true));		
+//	    super("RGB-Bild");
+//	    setBackground(Color.lightGray);
+//	    setSize(1200,1000);
+//	    setVisible(true);
+//	    //WindowListener
+//	    addWindowListener(new WindowClosingAdapter(true));		
 	} // Konstruktor
 	
 	  public void paint(Graphics g)
@@ -145,7 +132,7 @@ public class RGB_Vorlage extends Frame {
 	 * @param image Zu konvertierendes Bild.
 	 * @return Erzeugtes BufferedImage-Bild.
 	 */
-	public static BufferedImage toBufferedImage(Image image) {
+	public static BufferedImage toBufferedImage(Image image, boolean isPng) {
 		if (image instanceof BufferedImage) {
 			return (BufferedImage) image;
 		}
@@ -155,65 +142,7 @@ public class RGB_Vorlage extends Frame {
 
 		// Determine if the image has transparent pixels; for this method's
 		// implementation
-		boolean hasAlpha = false; //hasAlpha(image);
-
-		// Create a buffered image with a format that's compatible with the
-		// screen
-		BufferedImage bimage = null;
-		GraphicsEnvironment ge = GraphicsEnvironment
-				.getLocalGraphicsEnvironment();
-		try {
-			// Determine the type of transparency of the new buffered image
-			int transparency = Transparency.OPAQUE;
-			if (hasAlpha) {
-				transparency = Transparency.BITMASK;
-			} // if
-
-			// Create the buffered image
-			GraphicsDevice gs = ge.getDefaultScreenDevice();
-			GraphicsConfiguration gc = gs.getDefaultConfiguration();
-			bimage = gc.createCompatibleImage(image.getWidth(null), image
-					.getHeight(null), transparency);
-		} catch (HeadlessException e) {
-			// The system does not have a screen
-		} // catch
-
-		if (bimage == null) {
-			// Create a buffered image using the default color model
-			int type = BufferedImage.TYPE_INT_RGB;
-			if (hasAlpha) {
-				type = BufferedImage.TYPE_INT_ARGB;
-			}
-			bimage = new BufferedImage(image.getWidth(null), image
-					.getHeight(null), type);
-		} // if
-
-		// Copy image to buffered image
-		Graphics g = bimage.createGraphics();
-
-		// Paint the image onto the buffered image
-		g.drawImage(image, 0, 0, null);
-		g.dispose();
-
-		return bimage;
-	} // toBufferedImage
-	
-	/**
-	 * Hilfsmethode zum Konvertieren Image --> BufferedImage mit Alpha-Kanal.
-	 * @param image Zu konvertierendes Bild.
-	 * @return Erzeugtes BufferedImage-Bild.
-	 */
-	public static BufferedImage toBufferedAlphaImage(Image image) {
-		if (image instanceof BufferedImage) {
-			return (BufferedImage) image;
-		}
-
-		// This code ensures that all the pixels in the image are loaded
-		image = new ImageIcon(image).getImage();
-
-		// Determine if the image has transparent pixels; for this method's
-		// implementation
-		boolean hasAlpha = true; //hasAlpha(image);
+		boolean hasAlpha = isPng; //hasAlpha(image);
 
 		// Create a buffered image with a format that's compatible with the
 		// screen
@@ -254,7 +183,7 @@ public class RGB_Vorlage extends Frame {
 		g.dispose();
 
 		return bimage;
-	} // toBufferedAlphaImage
+	} // toBufferedImage
 
 	/**
 	 * Wandelt Bild in Zahlen-Array um. <br/>Zudem wird die Bild-Breite und
@@ -266,7 +195,7 @@ public class RGB_Vorlage extends Frame {
 	public int[] getRaster(Image img) {
 		int[] arr = new int[0];
 
-		// Warten, bis das Image vollst�ndig geladen ist:
+		// Warten, bis das Image vollstaendig geladen ist:
 		MediaTracker mt = new MediaTracker(this);
 		mt.addImage(img, 0);
 		try {
@@ -289,7 +218,7 @@ public class RGB_Vorlage extends Frame {
 		} else {
 			System.err.println("Keine gueltige Datei");
 		}
-		System.out.println("+++ width: " + width + ", height: " + height);
+//		System.out.println("+++ width: " + width + ", height: " + height);
 
 		return arr;
 	} // getRaster
@@ -300,19 +229,33 @@ public class RGB_Vorlage extends Frame {
 	 * @param filename Bilddatei.
 	 * @return Image-Objekt des geladenen Bildes.
 	 */
-	public Image loadImage(String filename) {
+	public Image loadImage(String filename)
+	{
 		img = getToolkit().getImage(filename);
 		// img = genImage();
 		// img = erzeugeBild();
 		MediaTracker mt = new MediaTracker(this);
 		mt.addImage(img, 0);
-		try {
-			//Warten, bis das Image vollst�ndig geladen ist,
+		try
+		{
+			//Warten, bis das Image vollstaendig geladen ist,
 			mt.waitForAll();
-		} catch (InterruptedException e) {
-			//nothing
 		}
-		System.out.println("Datei " + filename + " wurde geladen.");
+		catch (InterruptedException e) {
+			System.err.println("Fehler beim Datei-Laden");
+			e.printStackTrace();
+		}
+		
+		iObserver observer = new iObserver();
+		if (img.getWidth(observer) <= 0 || img.getHeight(observer) <= 0)
+		{
+			System.err.println("Fehler beim Datei-Laden");
+		}
+		else
+		{
+			System.out.println("Datei " + filename + " wurde geladen.");
+		}
+		
 		return img;
 	} // loadImage
 	
@@ -325,82 +268,105 @@ public class RGB_Vorlage extends Frame {
 	 * @param filename
 	 *            zu erzeugende JPEG-Datei.
 	 */
-	public void saveImage(Image img, String filename) {
-		try {
-			
-		    File outputfile = new File(filename);
-		    ImageIO.write(toBufferedImage(img), "jpg", outputfile);
-		    
-		} catch (IOException e) {
-			System.err.println("Fehler beim Datei-Schreiben");
-			e.printStackTrace();
-		} // catch
-		System.out.println("Datei " + filename + " ist geschrieben.");
-	} // saveImage
-	
-
-	public void saveImageAsPng(Image img, String filename) {
-		try {
-			
-		    File outputfile = new File(filename);
-		    ImageIO.write(toBufferedAlphaImage(img), "png", outputfile);
-		    
-		} catch (IOException e) {
-			System.err.println("Fehler beim Datei-Schreiben");
-			e.printStackTrace();
-		} // catch
-		System.out.println("Datei " + filename + " ist geschrieben.");
-	} // saveImage
-	
-	
-	public void saveImageAsPgm(Image img, String filename)
-	{
+	public void saveImage(Image img, String filename)
+	{		
 		try
 		{
-//			File outputfile = new File(filename);
-			PrintWriter out = new PrintWriter(filename);
-			
-			out.println("P2");
-			out.println("1024 768");
-			out.println("255");
-			
-			int[] imgRaster = getRaster(img);
-			RGB rgb = new RGB();
-			int pix;
-			
-			for (int y = 0; y < height; y++)
-			{
-				for (int x = 0; x < width; x++)
+		    String formatName = filename.split("\\.")[1];
+		    
+		    if (formatName.equals("pgm"))
+		    {
+		    	PrintWriter out = new PrintWriter(filename);
+		    	
+		    	out.println("P2");
+				out.println("1024 768");
+				out.println("255");
+				
+				int[] imgRaster = getRaster(img);
+				
+				if (imgRaster.length <= 0)
 				{
-					pix = imgRaster[y * width + x];
-					rgb.setRGB(pix);
-					int grayscaleValue = rgb.red;
-					out.format("%3d ", grayscaleValue);
+					out.close();
+					
+					System.err.println("Fehler beim Datei-Schreiben");
+					return;
 				}
-				out.format("\n");
-			}
-			
-			out.close();
+				
+				RGB rgb = new RGB();
+				int pix;
+				
+				for (int y = 0; y < height; y++)
+				{
+					for (int x = 0; x < width; x++)
+					{
+						pix = imgRaster[y * width + x];
+						rgb.setRGB(pix);
+						int grayscaleValue = rgb.red;
+						out.format("%3d ", grayscaleValue);
+					}
+					out.format("\n");
+				}
+				
+				out.close();
+		    }
+		    else
+		    {
+		    	File outputfile = new File(filename);
+		    	ImageIO.write(toBufferedImage(img, formatName.equals("png")), formatName, outputfile);
+		    }
+		    
+		    System.out.println("Datei " + filename + " ist geschrieben.");
 		}
 		catch (Exception e)
 		{
 			System.err.println("Fehler beim Datei-Schreiben");
 			e.printStackTrace();
 		} // catch
-		System.out.println("Datei " + filename + " ist geschrieben.");
-	}
+	} // saveImage
 	
+	public void createAndSavePbmImage(String filename)
+	{
+		try
+		{
+			PrintWriter out = new PrintWriter(filename);
+	    	
+	    	out.println("P1");
+			out.println("100 100");
+			
+			for (int y = 0; y < 100; y++)
+			{
+				for (int x = 0; x < 100; x++)
+				{
+					int bit = 0;
+					if (x >= 30 && x < 70 && y >= 30 && y < 70)
+					{
+						bit = 1;
+					}
+					out.format("%1d ", bit);
+				}
+				out.format("\n");
+			}
+			
+			out.close();
+			System.out.println("Datei " + filename + " ist geschrieben.");
+		}
+		catch (Exception e)
+		{
+			System.err.println("Fehler beim Datei-Schreiben");
+			e.printStackTrace();
+		}
+	} // createAndSavePbmImage
 
 	/**
 	 * Manipulation eines Bildes.
 	 */
-	public Image manipulateImage(Image img) {
+	public Image manipulateImage(Image img, int task) {
 		int[] imgRaster = getRaster(img);
 		RGB rgb = new RGB();
 		int pix; // Aktuelles Pixel
 		int index = 0;
 	
-		System.out.println("+++ height: " + height + ", width: " + width);
+//		System.out.println("+++ height: " + height + ", width: " + width);
 
 		for (int i = 0; i < height; i++) {
 			for (int j = 0; j < width; j++) {
@@ -408,18 +374,23 @@ public class RGB_Vorlage extends Frame {
 				// TEST
 				rgb.setRGB(pix);
 				
-				// Hier koennte Ihr Code stehen...
-				// TODO
-				
-				//rgb = rgb.ignoreBlue();
-				
-//				rgb = rgb.makeBlueTransparent();
-				
-				rgb = rgb.rgbToYuvGreyscale();
-				
-				
-				
-				
+				switch (task)
+				{
+				case 1:
+					rgb.ignoreBlue();
+					break;
+				case 2:
+					rgb.blueToTransparent();
+					break;
+				case 3:
+					rgb.toGrayscale();
+					break;
+				case 4:
+					rgb.toGrayscale();
+					break;
+				default:
+					System.err.println("Aufgabe " + task + " existiert nicht.");
+				}
 				
 				imgRaster[index++] = rgb.toPix(rgb);
 			} // for (j)
@@ -428,37 +399,48 @@ public class RGB_Vorlage extends Frame {
 		return img;
 	} // maniupulateImage
 	
-//	public BufferedImage apply(BufferedImage image) {
-//	    int pixel;
-//
-//	    for (int y = 0; y < image.getHeight(); y++) {
-//	        for (int x = 0; x < image.getWidth(); x++) {
-//	            pixel = image.getRGB(x, y);
-//
-//	            if (threshold < getAverageRGBfromPixel(pixel)) {
-//	                image.setRGB(x, y, new Color(0f, 0f, 0f, 0f).getRGB());
-//	            }               
-//	        }
-//	    }
-//
-//
-//	    return image;
-//	}
+	public void solveTask1(RGB_Vorlage rgb, Image img)
+	{
+		img = rgb.manipulateImage(img, 1);
+		rgb.saveImage(img, "Aufgabe_1.jpg");
+	} // solveTask1
 	
+	public void solveTask2(RGB_Vorlage rgb, Image img)
+	{
+		img = rgb.manipulateImage(img, 2);
+		rgb.saveImage(img, "Aufgabe_2.png");
+	} // solveTask2
 	
+	public void solveTask3(RGB_Vorlage rgb, Image img)
+	{
+		img = rgb.manipulateImage(img, 3);
+		rgb.saveImage(img, "Aufgabe_3.jpg");
+	} // solveTask3
 	
+	public void solveTask4(RGB_Vorlage rgb, Image img)
+	{
+		img = rgb.manipulateImage(img, 4);
+		rgb.saveImage(img, "Aufgabe_4.pgm");
+	} // solveTask4
+	
+	public void solveTask5(RGB_Vorlage rgb)
+	{
+		rgb.createAndSavePbmImage("Aufgabe_5.pbm");
+	} // solveTask5
 
 	public static void main(String args[]) {
 		Image img;
 		RGB_Vorlage rgb = new RGB_Vorlage();
 		img = rgb.loadImage("Tulip.jpg");
-		img = rgb.manipulateImage(img);
+		
+//		img = rgb.manipulateImage(img);
 //		rgb.saveImage(img, "Tulip_neu.jpg");
-//		rgb.saveImageAsPng(img, "Tulip_neu.png");
 		
-		rgb.saveImageAsPgm(img, "Aufgabe4.pgm");
-		
-		
+		rgb.solveTask1(rgb, img);
+		rgb.solveTask2(rgb, img);
+		rgb.solveTask3(rgb, img);
+		rgb.solveTask4(rgb, img);
+		rgb.solveTask5(rgb);
 	} // main
 	
 } // class RGB_Vorlage
