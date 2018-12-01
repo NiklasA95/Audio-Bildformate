@@ -233,7 +233,7 @@ public class WaveCDur2Kanal {
 	
 	public static void main(String args[]) {
 		WaveCDur2Kanal wav = new WaveCDur2Kanal();
-		String filename = "WaveCDur2Kanal.wav";
+		String filename = "outCDur2Kanal.wav";
 		wav.writeFile(filename);
 		System.out.println("Datei " + filename + " wurde geschrieben.");
 	} // main

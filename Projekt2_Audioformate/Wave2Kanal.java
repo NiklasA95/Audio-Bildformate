@@ -143,7 +143,7 @@ public class Wave2Kanal {
 	
 	public static void main(String args[]) {
 		Wave2Kanal wav = new Wave2Kanal();
-		String filename = "Wave2Kanal.wav";
+		String filename = "out2Kanal.wav";
 		wav.writeFile(filename);
 		System.out.println("Datei " + filename + " wurde geschrieben.");
 	} // main

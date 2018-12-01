@@ -1,13 +1,8 @@
 package Projekt2_Audioformat;
-/**
- * WAV-Reader (Vorlage)
- * @author clecon
- * @date Nov 2018
- *
- */
+
 import java.io.*;
 
-public class WaveReaderVorlage {
+public class WaveReader {
 
 	// Dateioperationen:
 	FileInputStream f;
@@ -181,9 +176,9 @@ public class WaveReaderVorlage {
 	} // readFile
 	
 	public static void main(String args[]) {
-		WaveReaderVorlage wav = new WaveReaderVorlage();
+		WaveReader wav = new WaveReader();
 		String filename = "Doorslam.wav";
 		wav.readFile(filename);
 	} // main
 	
-} // class WaveReaderVorlage
+} // class WaveReader

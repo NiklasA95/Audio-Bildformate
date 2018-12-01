@@ -1,11 +1,5 @@
 package Projekt2_Audioformat;
-/**
- * Erstellung einer Wave-Datei mit Kammerton a.
- * @author clecon
- * @version 1.2
- * @date Nov 2018
- *
- */
+
 import java.io.*;
 
 public class WaveNarcotic {
