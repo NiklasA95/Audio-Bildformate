@@ -2,7 +2,7 @@ package Projekt2_Audioformat;
 
 import java.io.*;
 
-public class WaveReader {
+public class Uebung_1 {
 
 	// Dateioperationen:
 	FileInputStream f;
@@ -176,9 +176,9 @@ public class WaveReader {
 	} // readFile
 	
 	public static void main(String args[]) {
-		WaveReader wav = new WaveReader();
+		Uebung_1 wav = new Uebung_1();
 		String filename = "Doorslam.wav";
 		wav.readFile(filename);
 	} // main
 	
-} // class WaveReader
+} // class Uebung_1

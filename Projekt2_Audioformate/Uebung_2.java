@@ -2,7 +2,7 @@ package Projekt2_Audioformat;
 
 import java.io.*;
 
-public class Wave2Kanal {
+public class Uebung_2 {
 
 	// Parameter-Definitionen
 	private static int NSECS = 8;			        /* Spieldauer der Datei [s] */
@@ -142,9 +142,9 @@ public class Wave2Kanal {
 	} // writeFile
 	
 	public static void main(String args[]) {
-		Wave2Kanal wav = new Wave2Kanal();
-		String filename = "out2Kanal.wav";
+		Uebung_2 wav = new Uebung_2();
+		String filename = "outUebung_2.wav";
 		wav.writeFile(filename);
 		System.out.println("Datei " + filename + " wurde geschrieben.");
 	} // main
-} // class Wave2Kanal
+} // class Uebung_2

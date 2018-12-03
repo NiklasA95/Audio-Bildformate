@@ -2,10 +2,10 @@ package Projekt2_Audioformat;
 
 import java.io.*;
 
-public class WaveAlleMeineEntchen {
+public class Uebung_6 {
 
 	// Parameter-Definitionen
-	private static int NSECS = 10;			        /* Spieldauer der Datei [s] */
+	private static int NSECS = 8;			        /* Spieldauer der Datei [s] */
 	private static int SAM_RATE = 8000;			    /* Abtastrate [Hz] */
 
 	private static int FMT_SIZE = 16;			    /* Groesse des Format-'Chunks' */
@@ -115,14 +115,15 @@ public class WaveAlleMeineEntchen {
 			/* Ganze Note: 8000
 			 * Halbe Note: 4000
 			 * Viertel Note: 2000
+			 * Achtel Note: 1000
 			 */
 			
 			for (int i = 0; i < dataSize; i++) {
 				// PCM-Codierung:
 				
-				// 1.Takt				
+				// 1.Takt
 				if(i < 1990) {
-					short iss1 = (new Double(127.5 * Math.sin(2 * M_PI * 264
+					short iss1 = (new Double(127.5 * Math.sin(2 * M_PI * 330
 						/ SAM_RATE * i) + 128)).shortValue(); 
 					out.writeByte(iss1);
 				}
@@ -140,65 +141,95 @@ public class WaveAlleMeineEntchen {
 				}
 				
 				if(i > 6000 && i < 7990) {
+					short iss1 = (new Double(127.5 * Math.sin(2 * M_PI * 297
+						/ SAM_RATE * i) + 128)).shortValue(); 
+					out.writeByte(iss1);
+				}
+				
+				// 2.Takt				
+				if(i > 8000 && i < 9990) {
+					short iss1 = (new Double(127.5 * Math.sin(2 * M_PI * 330
+						/ SAM_RATE * i) + 128)).shortValue(); 
+					out.writeByte(iss1);
+				} 
+				
+				if(i > 10000 && i < 11990) {
+					short iss1 = (new Double(127.5 * Math.sin(2 * M_PI * 297
+						/ SAM_RATE * i) + 128)).shortValue(); 
+					out.writeByte(iss1);
+				} 
+				
+				if(i > 12000 && i < 13990) {
+					short iss1 = (new Double(127.5 * Math.sin(2 * M_PI * 330
+						/ SAM_RATE * i) + 128)).shortValue(); 
+					out.writeByte(iss1);
+				}
+				
+				if(i > 14000 && i < 14990) {
+					short iss1 = (new Double(127.5 * Math.sin(2 * M_PI * 297
+						/ SAM_RATE * i) + 128)).shortValue(); 
+					out.writeByte(iss1);
+				}
+				
+				if(i > 15000 && i < 17990) {
 					short iss1 = (new Double(127.5 * Math.sin(2 * M_PI * 352
 						/ SAM_RATE * i) + 128)).shortValue(); 
 					out.writeByte(iss1);
 				}
 				
-				// 2.Takt
-				if(i > 8000 && i < 11990) {
-					short iss1 = (new Double(127.5 * Math.sin(2 * M_PI * 396
-						/ SAM_RATE * i) + 128)).shortValue(); 
-					out.writeByte(iss1);
-				} 
-				
-				if(i > 12000 && i < 15990) {
-					short iss1 = (new Double(127.5 * Math.sin(2 * M_PI * 396
-						/ SAM_RATE * i) + 128)).shortValue(); 
-					out.writeByte(iss1);
-				} 
-				
-				// 3.Takt
-				if(i > 16000 && i < 17990) {
-					short iss1 = (new Double(127.5 * Math.sin(2 * M_PI * 440
-						/ SAM_RATE * i) + 128)).shortValue(); 
-					out.writeByte(iss1);
-				}
-				
+				// 3.Takt + 1 Viertel
 				if(i > 18000 && i < 19990) {
-					short iss1 = (new Double(127.5 * Math.sin(2 * M_PI * 440
+					short iss1 = (new Double(127.5 * Math.sin(2 * M_PI * 330
 						/ SAM_RATE * i) + 128)).shortValue(); 
 					out.writeByte(iss1);
 				}
 				
 				if(i > 20000 && i < 21990) {
-					short iss1 = (new Double(127.5 * Math.sin(2 * M_PI * 440
+					short iss1 = (new Double(127.5 * Math.sin(2 * M_PI * 352
 						/ SAM_RATE * i) + 128)).shortValue(); 
 					out.writeByte(iss1);
 				}
 				
 				if(i > 22000 && i < 23990) {
-					short iss1 = (new Double(127.5 * Math.sin(2 * M_PI * 440
+					short iss1 = (new Double(127.5 * Math.sin(2 * M_PI * 330
 						/ SAM_RATE * i) + 128)).shortValue(); 
 					out.writeByte(iss1);
 				}
 				
 				// 4.Takt
-				if(i > 24000 && i < 31990) {
+				if(i > 24000 && i < 25990) {
+					short iss1 = (new Double(127.5 * Math.sin(2 * M_PI * 352
+						/ SAM_RATE * i) + 128)).shortValue(); 
+					out.writeByte(iss1);
+				}
+				
+				if(i > 26000 && i < 27990) {
+					short iss1 = (new Double(127.5 * Math.sin(2 * M_PI * 330
+						/ SAM_RATE * i) + 128)).shortValue(); 
+					out.writeByte(iss1);
+				}
+				
+				if(i > 28000 && i < 29990) {
+					short iss1 = (new Double(127.5 * Math.sin(2 * M_PI * 352
+						/ SAM_RATE * i) + 128)).shortValue(); 
+					out.writeByte(iss1);
+				}
+				
+				if(i > 30000 && i < 30990) {
 					short iss1 = (new Double(127.5 * Math.sin(2 * M_PI * 396
 						/ SAM_RATE * i) + 128)).shortValue(); 
 					out.writeByte(iss1);
 				}
 				
-				// 5.Takt
-				if(i > 32000 && i < 33990) {
+				if(i > 31000 && i < 33990) {
 					short iss1 = (new Double(127.5 * Math.sin(2 * M_PI * 440
 						/ SAM_RATE * i) + 128)).shortValue(); 
 					out.writeByte(iss1);
 				}
 				
+				// 5.Takt + 1 Viertel
 				if(i > 34000 && i < 35990) {
-					short iss1 = (new Double(127.5 * Math.sin(2 * M_PI * 440
+					short iss1 = (new Double(127.5 * Math.sin(2 * M_PI * 396
 						/ SAM_RATE * i) + 128)).shortValue(); 
 					out.writeByte(iss1);
 				}
@@ -210,39 +241,57 @@ public class WaveAlleMeineEntchen {
 				}
 				
 				if(i > 38000 && i < 39990) {
-					short iss1 = (new Double(127.5 * Math.sin(2 * M_PI * 440
-						/ SAM_RATE * i) + 128)).shortValue(); 
-					out.writeByte(iss1);
-				}
-				
-				// 6.Takt
-				if(i > 40000 && i < 47990) {
 					short iss1 = (new Double(127.5 * Math.sin(2 * M_PI * 396
 						/ SAM_RATE * i) + 128)).shortValue(); 
 					out.writeByte(iss1);
 				}
 				
-				// 7.Takt
-				if(i > 48000 && i < 49990) {
-					short iss1 = (new Double(127.5 * Math.sin(2 * M_PI * 352
+				// 6.Takt
+				if(i > 40000 && i < 41990) {
+					short iss1 = (new Double(127.5 * Math.sin(2 * M_PI * 440
 						/ SAM_RATE * i) + 128)).shortValue(); 
 					out.writeByte(iss1);
 				}
 				
+				if(i > 42000 && i < 43990) {
+					short iss1 = (new Double(127.5 * Math.sin(2 * M_PI * 396
+						/ SAM_RATE * i) + 128)).shortValue(); 
+					out.writeByte(iss1);
+				}
+				
+				if(i > 44000 && i < 45990) {
+					short iss1 = (new Double(127.5 * Math.sin(2 * M_PI * 440
+						/ SAM_RATE * i) + 128)).shortValue(); 
+					out.writeByte(iss1);
+				}
+				
+				if(i > 46000 && i < 46990) {
+					short iss1 = (new Double(127.5 * Math.sin(2 * M_PI * 396
+						/ SAM_RATE * i) + 128)).shortValue(); 
+					out.writeByte(iss1);
+				}
+				
+				if(i > 47000 && i < 49990) {
+					short iss1 = (new Double(127.5 * Math.sin(2 * M_PI * 330
+						/ SAM_RATE * i) + 128)).shortValue(); 
+					out.writeByte(iss1);
+				}
+				
+				// 7.Takt + 1 Viertel
 				if(i > 50000 && i < 51990) {
-					short iss1 = (new Double(127.5 * Math.sin(2 * M_PI * 352
+					short iss1 = (new Double(127.5 * Math.sin(2 * M_PI * 297
 						/ SAM_RATE * i) + 128)).shortValue(); 
 					out.writeByte(iss1);
 				}
 				
 				if(i > 52000 && i < 53990) {
-					short iss1 = (new Double(127.5 * Math.sin(2 * M_PI * 352
+					short iss1 = (new Double(127.5 * Math.sin(2 * M_PI * 330
 						/ SAM_RATE * i) + 128)).shortValue(); 
 					out.writeByte(iss1);
 				}
 				
 				if(i > 54000 && i < 55990) {
-					short iss1 = (new Double(127.5 * Math.sin(2 * M_PI * 352
+					short iss1 = (new Double(127.5 * Math.sin(2 * M_PI * 297
 						/ SAM_RATE * i) + 128)).shortValue(); 
 					out.writeByte(iss1);
 				}
@@ -255,43 +304,10 @@ public class WaveAlleMeineEntchen {
 				}
 				
 				if(i > 60000 && i < 63990) {
-					short iss1 = (new Double(127.5 * Math.sin(2 * M_PI * 330
+					short iss1 = (new Double(127.5 * Math.sin(2 * M_PI * 352
 						/ SAM_RATE * i) + 128)).shortValue(); 
 					out.writeByte(iss1);
-				}
-				
-				// 9.Takt
-				if(i > 64000 && i < 65990) {
-					short iss1 = (new Double(127.5 * Math.sin(2 * M_PI * 297
-						/ SAM_RATE * i) + 128)).shortValue(); 
-					out.writeByte(iss1);
-				}
-				
-				if(i > 66000 && i < 67990) {
-					short iss1 = (new Double(127.5 * Math.sin(2 * M_PI * 297
-						/ SAM_RATE * i) + 128)).shortValue(); 
-					out.writeByte(iss1);
-				}
-				
-				if(i > 68000 && i < 69990) {
-					short iss1 = (new Double(127.5 * Math.sin(2 * M_PI * 297
-						/ SAM_RATE * i) + 128)).shortValue(); 
-					out.writeByte(iss1);
-				}
-				
-				if(i > 70000 && i < 71990) {
-					short iss1 = (new Double(127.5 * Math.sin(2 * M_PI * 297
-						/ SAM_RATE * i) + 128)).shortValue(); 
-					out.writeByte(iss1);
-				}
-				
-				// 10.Takt
-				if(i > 72000 && i < 79990) {
-					short iss1 = (new Double(127.5 * Math.sin(2 * M_PI * 264
-						/ SAM_RATE * i) + 128)).shortValue(); 
-					out.writeByte(iss1);
-				}
-					
+				}	
 			} // for
 			out.close();
 		} catch (IOException e) {
@@ -300,9 +316,9 @@ public class WaveAlleMeineEntchen {
 	} // writeFile
 	
 	public static void main(String args[]) {
-		WaveAlleMeineEntchen wav = new WaveAlleMeineEntchen();
-		String filename = "outAlleMeineEntchen.wav";
+		Uebung_6 wav = new Uebung_6();
+		String filename = "outUebung_6.wav";
 		wav.writeFile(filename);
 		System.out.println("Datei " + filename + " wurde geschrieben.");
 	} // main
-} // class WaveAlleMeineEntchen
+} // class Uebung_6
