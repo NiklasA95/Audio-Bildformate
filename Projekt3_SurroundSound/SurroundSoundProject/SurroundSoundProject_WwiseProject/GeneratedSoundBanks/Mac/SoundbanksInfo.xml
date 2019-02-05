@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="11" SoundbankVersion="132">
+	<RootPaths>
+		<ProjectRoot>C:\Users\Niklas\Desktop\Uni\Audio- und Bildformate\Audio-Bildformate\Projekt3_SurroundSound\SurroundSoundProject\SurroundSoundProject_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\Niklas\Desktop\Uni\Audio- und Bildformate\Audio-Bildformate\Projekt3_SurroundSound\SurroundSoundProject\SurroundSoundProject_WwiseProject\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\Niklas\Desktop\Uni\Audio- und Bildformate\Audio-Bildformate\Projekt3_SurroundSound\SurroundSoundProject\SurroundSoundProject_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>C:\Users\Niklas\Desktop\Uni\Audio- und Bildformate\Audio-Bildformate\Projekt3_SurroundSound\SurroundSoundProject\SurroundSoundProject_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="2385628198" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\Footsteps</ObjectPath>
+			<ShortName>Footsteps</ShortName>
+			<Path>Footsteps.bnk</Path>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

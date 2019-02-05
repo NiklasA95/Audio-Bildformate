@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb418ff17eb91ec4285a62b8a7fa4bef, type: 3}
+  m_Name: AkWwiseProjectData
+  m_EditorClassIdentifier: 
+  AcousticTextureWwu:
+  - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 3488aac9e851fb4a92ee1da3968af60a
+    m_lastTime: -8586523302074480258
+    List: []
+  AuxBusWwu:
+  - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 8ad47792397b714bb78384bcf02032bb
+    m_lastTime: -8586523302075139883
+    List: []
+  BankWwu:
+  - PhysicalPath: SoundBanks\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 27c2d80cc7d0e54eb616438ab812287f
+    m_lastTime: -8586523288576207172
+    List:
+    - name: Footsteps
+      guid: a2f2164db31e6d498af85b233f9db217
+      id: 2385628198
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Footsteps
+        ObjectType: 7
+      Path: Default Work Unit\Footsteps
+  EventWwu:
+  - PhysicalPath: Events\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: e4a4eedf1e61cd448a118c87ce0197b4
+    m_lastTime: -8586523302075289793
+    List: []
+  RtpcWwu:
+  - PhysicalPath: Game Parameters\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 6625b5aa95bfdf48a20da4f116423360
+    m_lastTime: -8586523302075249821
+    List: []
+  StateWwu:
+  - PhysicalPath: States\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: a61f5737dea12e46856550623a416383
+    m_lastTime: -8586523302074630174
+    List: []
+  SwitchWwu:
+  - PhysicalPath: Switches\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 74e601e733fdeb45a324a70528587da5
+    m_lastTime: -8586523302074520221
+    List: []
+  TriggerWwu:
+  - PhysicalPath: Triggers\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 0ab6cc1006e4e4409952b88c4e06b7a4
+    m_lastTime: -8586523302074590197
+    List: []
+  ExpandedItems:
+  - /SurroundSoundProject_WwiseProject
+  - /SurroundSoundProject_WwiseProject/SoundBanks
+  - /SurroundSoundProject_WwiseProject/SoundBanks/Default Work Unit
+  autoPopulateEnabled: 1
+  CurrentPluginConfig: 
