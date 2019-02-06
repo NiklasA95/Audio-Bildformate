@@ -21,13 +21,24 @@ MonoBehaviour:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 4cd2d839b796af4ea5313296c1fddc61
-    m_lastTime: -8586522066993354912
-    List: []
+    m_lastTime: -8586521424294407533
+    List:
+    - name: Reverb
+      guid: 8b448902de0e7740af9089d622d7b468
+      id: 348963605
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+      - ElementName: Reverb
+        ObjectType: 1
+      Path: Default Work Unit\Master Audio Bus\Reverb
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 6b1014648b0a1f42908dfd079ed16958
-    m_lastTime: -8586521944380578224
+    m_lastTime: -8586521399954346716
     List:
     - name: Ambient
       guid: f6bdd26538ed564fbff91ba5afcceb49
@@ -51,7 +62,7 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: dc25695a56b354459838ae1e159643b0
-    m_lastTime: -8586521944380458475
+    m_lastTime: -8586521399954486643
     List:
     - name: Birds
       guid: f55385caf3d71847a1d0c51b3799b128
@@ -62,7 +73,7 @@ MonoBehaviour:
       - ElementName: Birds
         ObjectType: 3
       Path: Default Work Unit\Birds
-      maxAttenuation: 0
+      maxAttenuation: 15
       maxDuration: 0
       minDuration: 0
     - name: Car
@@ -74,7 +85,7 @@ MonoBehaviour:
       - ElementName: Car
         ObjectType: 3
       Path: Default Work Unit\Car
-      maxAttenuation: 0
+      maxAttenuation: 80
       maxDuration: 0
       minDuration: 0
     - name: Footstep
@@ -89,15 +100,27 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
-    - name: Rain
-      guid: d219fdecc376f34ca057f47d6ee5369f
-      id: 2043403999
+    - name: Jump
+      guid: 432ea4fc285e70458284efaaedff9871
+      id: 3833651337
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: Rain
+      - ElementName: Jump
         ObjectType: 3
-      Path: Default Work Unit\Rain
+      Path: Default Work Unit\Jump
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Landing
+      guid: 841ed579bfeb894eb7a74b39a2549415
+      id: 2548270042
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Landing
+        ObjectType: 3
+      Path: Default Work Unit\Landing
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -117,7 +140,7 @@ MonoBehaviour:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 692f60fa286da54181fa26672867e7ed
-    m_lastTime: -8586521991364917485
+    m_lastTime: -8586521493729293144
     List:
     - name: Footsteps
       guid: 0c4a4fb3de9b384aa2c866881ce2de36
@@ -129,6 +152,12 @@ MonoBehaviour:
         ObjectType: 11
       Path: Default Work Unit\Footsteps
       values:
+      - name: Grass
+        guid: 8ade0429b0227c4dbeea3d5d54f71cd0
+        id: 4248645337
+        PathAndIcons:
+        - ElementName: Grass
+          ObjectType: 10
       - name: Mudd
         guid: ac23f4a7478f83489d6af234dde55c08
         id: 3242545539
@@ -151,7 +180,5 @@ MonoBehaviour:
   - /SurroundSoundProject_WwiseProject
   - /SurroundSoundProject_WwiseProject/Events
   - /SurroundSoundProject_WwiseProject/Events/Default Work Unit
-  - /SurroundSoundProject_WwiseProject/SoundBanks
-  - /SurroundSoundProject_WwiseProject/SoundBanks/Default Work Unit
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

@@ -1,10 +1,11 @@
 Event	ID	Name			Wwise Object Path	Notes
 	352130103	Birds			\Default Work Unit\Birds	
 	983016381	Car			\Default Work Unit\Car	
-	2043403999	Rain			\Default Work Unit\Rain	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	377326920	Birds	C:\Users\Niklas\Desktop\Uni\Audio und Bildformate\Audio-Bildformate\Projekt3_SurroundSound\SurroundSoundProject\SurroundSoundProject_WwiseProject\.cache\Mac\SFX\Birds_8956FC97.wem		\Actor-Mixer Hierarchy\Default Work Unit\Birds		1259644
-	494090980	Rain	C:\Users\Niklas\Desktop\Uni\Audio und Bildformate\Audio-Bildformate\Projekt3_SurroundSound\SurroundSoundProject\SurroundSoundProject_WwiseProject\.cache\Mac\SFX\Rain_8956FC97.wem		\Actor-Mixer Hierarchy\Default Work Unit\Rain		10602024
-	656027689	Car	C:\Users\Niklas\Desktop\Uni\Audio und Bildformate\Audio-Bildformate\Projekt3_SurroundSound\SurroundSoundProject\SurroundSoundProject_WwiseProject\.cache\Mac\SFX\Car_8956FC97.wem		\Actor-Mixer Hierarchy\Default Work Unit\Car		11693644
+	377326920	Birds	C:\Users\Niklas\Desktop\Uni\Audio und Bildformate\Audio-Bildformate\Projekt3_SurroundSound\SurroundSoundProject\SurroundSoundProject_WwiseProject\.cache\Mac\SFX\Birds_8956FC97.wem		\Actor-Mixer Hierarchy\Default Work Unit\Birds_Container\Birds		1259644
+	656027689	Car	C:\Users\Niklas\Desktop\Uni\Audio und Bildformate\Audio-Bildformate\Projekt3_SurroundSound\SurroundSoundProject\SurroundSoundProject_WwiseProject\.cache\Mac\SFX\Car_8956FC97.wem		\Actor-Mixer Hierarchy\Default Work Unit\Car		4714572
+	786775650	Birds_03	C:\Users\Niklas\Desktop\Uni\Audio und Bildformate\Audio-Bildformate\Projekt3_SurroundSound\SurroundSoundProject\SurroundSoundProject_WwiseProject\.cache\Mac\SFX\Birds_5933263F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Birds_Container\Birds_03		402648
+	888004017	Birds_01	C:\Users\Niklas\Desktop\Uni\Audio und Bildformate\Audio-Bildformate\Projekt3_SurroundSound\SurroundSoundProject\SurroundSoundProject_WwiseProject\.cache\Mac\SFX\Birds_67BCD0E2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Birds_Container\Birds_01		701572
+	976897770	Birds_02	C:\Users\Niklas\Desktop\Uni\Audio und Bildformate\Audio-Bildformate\Projekt3_SurroundSound\SurroundSoundProject\SurroundSoundProject_WwiseProject\.cache\Mac\SFX\Birds_99EB0C78.wem		\Actor-Mixer Hierarchy\Default Work Unit\Birds_Container\Birds_02		325508
 

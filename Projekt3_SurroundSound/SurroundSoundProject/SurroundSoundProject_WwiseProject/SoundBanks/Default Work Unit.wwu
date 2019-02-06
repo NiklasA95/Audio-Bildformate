@@ -5,7 +5,11 @@
 			<ChildrenList>
 				<SoundBank Name="Footsteps" ID="{CB6F7258-F47D-4C27-A987-BD6A4F333BE5}">
 					<ObjectInclusionList>
+						<ObjectRef Name="Footsteps_Jump" ID="{543B7F07-33AE-4150-8E4D-BF6E841C403F}" WorkUnitID="{356AD583-FC0A-4A88-B4E1-0947DB580537}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Footstep" ID="{830D556A-2054-4240-8968-6E926923ACE6}" WorkUnitID="{5A6925DC-B356-4554-9838-AE1E159643B0}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Jump" ID="{FCA42E43-5E28-4570-8284-EFAAEDFF9871}" WorkUnitID="{5A6925DC-B356-4554-9838-AE1E159643B0}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Footsteps_Landing" ID="{A1B3D182-A306-4A9F-BE6F-C9A734F76D1B}" WorkUnitID="{356AD583-FC0A-4A88-B4E1-0947DB580537}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Landing" ID="{79D51E84-EBBF-4E89-B7A7-4B39A2549415}" WorkUnitID="{5A6925DC-B356-4554-9838-AE1E159643B0}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
@@ -14,7 +18,6 @@
 					<ObjectInclusionList>
 						<ObjectRef Name="Car" ID="{92BA7A7D-BBBF-4069-866C-BD356D2C4C52}" WorkUnitID="{5A6925DC-B356-4554-9838-AE1E159643B0}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Birds" ID="{CA8553F5-D7F3-4718-A1D0-C51B3799B128}" WorkUnitID="{5A6925DC-B356-4554-9838-AE1E159643B0}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Rain" ID="{ECFD19D2-76C3-4CF3-A057-F47D6EE5369F}" WorkUnitID="{5A6925DC-B356-4554-9838-AE1E159643B0}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

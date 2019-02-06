@@ -87,7 +87,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private void PlayLandingSound()
         {
             m_AudioSource.clip = m_LandSound;
-            m_AudioSource.Play();
+            AkSoundEngine.PostEvent("Landing", gameObject);
             m_NextStep = m_StepCycle + .5f;
         }
 
@@ -116,7 +116,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 if (m_Jump)
                 {
                     m_MoveDir.y = m_JumpSpeed;
-                    PlayJumpSound();
+                    AkSoundEngine.PostEvent("Jump", gameObject);
                     m_Jump = false;
                     m_Jumping = true;
                 }

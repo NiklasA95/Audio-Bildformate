@@ -16,22 +16,29 @@
 			<ShortName>Ambient</ShortName>
 			<Path>Ambient.bnk</Path>
 			<IncludedEvents>
-				<Event Id="352130103" Name="Birds" ObjectPath="\Events\Default Work Unit\Birds" MaxAttenuation="50.000000"/>
-				<Event Id="983016381" Name="Car" ObjectPath="\Events\Default Work Unit\Car" MaxAttenuation="20.000000"/>
-				<Event Id="2043403999" Name="Rain" ObjectPath="\Events\Default Work Unit\Rain" MaxAttenuation="50.000000"/>
+				<Event Id="352130103" Name="Birds" ObjectPath="\Events\Default Work Unit\Birds" MaxAttenuation="15.000000"/>
+				<Event Id="983016381" Name="Car" ObjectPath="\Events\Default Work Unit\Car" MaxAttenuation="50.000000"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="377326920" Language="SFX">
 					<ShortName>Birds.wav</ShortName>
 					<Path>SFX\Birds_8956FC97.wem</Path>
 				</File>
-				<File Id="494090980" Language="SFX">
-					<ShortName>Rain.wav</ShortName>
-					<Path>SFX\Rain_8956FC97.wem</Path>
-				</File>
 				<File Id="656027689" Language="SFX">
 					<ShortName>Car.wav</ShortName>
 					<Path>SFX\Car_8956FC97.wem</Path>
+				</File>
+				<File Id="786775650" Language="SFX">
+					<ShortName>Birds.wav</ShortName>
+					<Path>SFX\Birds_5933263F.wem</Path>
+				</File>
+				<File Id="888004017" Language="SFX">
+					<ShortName>Birds.wav</ShortName>
+					<Path>SFX\Birds_67BCD0E2.wem</Path>
+				</File>
+				<File Id="976897770" Language="SFX">
+					<ShortName>Birds.wav</ShortName>
+					<Path>SFX\Birds_99EB0C78.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
@@ -46,19 +53,53 @@
 			<Path>Footsteps.bnk</Path>
 			<IncludedEvents>
 				<Event Id="1866025847" Name="Footstep" ObjectPath="\Events\Default Work Unit\Footstep"/>
+				<Event Id="3833651337" Name="Jump" ObjectPath="\Events\Default Work Unit\Jump"/>
+				<Event Id="2548270042" Name="Landing" ObjectPath="\Events\Default Work Unit\Landing"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="81525172" Language="SFX">
 					<ShortName>Footsteps\Mudd\Footstep_mudd10.wav</ShortName>
 					<Path>SFX\Footsteps\Mudd\Footstep_mudd10_56D34C19.wem</Path>
 				</File>
+				<File Id="124247521" Language="SFX">
+					<ShortName>Footstep_grass02.wav</ShortName>
+					<Path>SFX\Footstep_grass02_56D34C19.wem</Path>
+				</File>
 				<File Id="189362204" Language="SFX">
 					<ShortName>Footsteps\Normal\Footstep02.wav</ShortName>
 					<Path>SFX\Footsteps\Normal\Footstep02_56D34C19.wem</Path>
 				</File>
+				<File Id="285772250" Language="SFX">
+					<ShortName>Footstep_grass06.wav</ShortName>
+					<Path>SFX\Footstep_grass06_56D34C19.wem</Path>
+				</File>
+				<File Id="378431999" Language="SFX">
+					<ShortName>Footstep_grass07.wav</ShortName>
+					<Path>SFX\Footstep_grass07_56D34C19.wem</Path>
+				</File>
 				<File Id="397941494" Language="SFX">
 					<ShortName>Footsteps\Mudd\Footstep_mudd06.wav</ShortName>
 					<Path>SFX\Footsteps\Mudd\Footstep_mudd06_56D34C19.wem</Path>
+				</File>
+				<File Id="404190223" Language="SFX">
+					<ShortName>Footstep_grass03.wav</ShortName>
+					<Path>SFX\Footstep_grass03_56D34C19.wem</Path>
+				</File>
+				<File Id="409906737" Language="SFX">
+					<ShortName>Footstep_grass04.wav</ShortName>
+					<Path>SFX\Footstep_grass04_56D34C19.wem</Path>
+				</File>
+				<File Id="426028609" Language="SFX">
+					<ShortName>Footstep_grass01.wav</ShortName>
+					<Path>SFX\Footstep_grass01_56D34C19.wem</Path>
+				</File>
+				<File Id="508323177" Language="SFX">
+					<ShortName>Footstep_grass12.wav</ShortName>
+					<Path>SFX\Footstep_grass12_56D34C19.wem</Path>
+				</File>
+				<File Id="582238792" Language="SFX">
+					<ShortName>Footstep_grass05.wav</ShortName>
+					<Path>SFX\Footstep_grass05_56D34C19.wem</Path>
 				</File>
 				<File Id="600642423" Language="SFX">
 					<ShortName>Footsteps\Mudd\Footstep_mudd12.wav</ShortName>
@@ -80,6 +121,14 @@
 					<ShortName>Footsteps\Normal\Footstep01.wav</ShortName>
 					<Path>SFX\Footsteps\Normal\Footstep01_56D34C19.wem</Path>
 				</File>
+				<File Id="712317909" Language="SFX">
+					<ShortName>Footstep_grass08.wav</ShortName>
+					<Path>SFX\Footstep_grass08_56D34C19.wem</Path>
+				</File>
+				<File Id="754608339" Language="SFX">
+					<ShortName>Footstep_grass09.wav</ShortName>
+					<Path>SFX\Footstep_grass09_56D34C19.wem</Path>
+				</File>
 				<File Id="793256309" Language="SFX">
 					<ShortName>Footsteps\Mudd\Footstep_mudd09.wav</ShortName>
 					<Path>SFX\Footsteps\Mudd\Footstep_mudd09_56D34C19.wem</Path>
@@ -92,9 +141,17 @@
 					<ShortName>Footsteps\Mudd\Footstep_mudd05.wav</ShortName>
 					<Path>SFX\Footsteps\Mudd\Footstep_mudd05_56D34C19.wem</Path>
 				</File>
+				<File Id="894109062" Language="SFX">
+					<ShortName>Footstep_grass11.wav</ShortName>
+					<Path>SFX\Footstep_grass11_56D34C19.wem</Path>
+				</File>
 				<File Id="922170452" Language="SFX">
 					<ShortName>Footsteps\Mudd\Footstep_mudd11.wav</ShortName>
 					<Path>SFX\Footsteps\Mudd\Footstep_mudd11_56D34C19.wem</Path>
+				</File>
+				<File Id="966121310" Language="SFX">
+					<ShortName>Footstep_grass10.wav</ShortName>
+					<Path>SFX\Footstep_grass10_56D34C19.wem</Path>
 				</File>
 				<File Id="993478813" Language="SFX">
 					<ShortName>Footsteps\Normal\Footstep03.wav</ShortName>

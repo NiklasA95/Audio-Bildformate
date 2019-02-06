@@ -5,7 +5,7 @@
 			<ChildrenList>
 				<Attenuation Name="Car" ID="{69EBC7FC-E5C6-4967-B8DF-075711CF0841}" ShortID="215281983">
 					<PropertyList>
-						<Property Name="RadiusMax" Type="Real64" Value="20"/>
+						<Property Name="RadiusMax" Type="Real64" Value="50"/>
 					</PropertyList>
 					<CurveUsageInfoList>
 						<VolumeDryUsage>
@@ -21,12 +21,12 @@
 											<Flags>5</Flags>
 										</Point>
 										<Point>
-											<XPos>5</XPos>
-											<YPos>-8.74635</YPos>
+											<XPos>19.89348</XPos>
+											<YPos>-12.38393</YPos>
 											<Flags>0</Flags>
 										</Point>
 										<Point>
-											<XPos>20</XPos>
+											<XPos>50</XPos>
 											<YPos>-200</YPos>
 											<Flags>37</Flags>
 										</Point>
@@ -53,7 +53,7 @@
 											<Flags>5</Flags>
 										</Point>
 										<Point>
-											<XPos>20</XPos>
+											<XPos>50</XPos>
 											<YPos>50</YPos>
 											<Flags>37</Flags>
 										</Point>
@@ -74,7 +74,7 @@
 				</Attenuation>
 				<Attenuation Name="Environment" ID="{1682BA7F-4C1E-4895-8187-DD16397E9BBC}" ShortID="942543006">
 					<PropertyList>
-						<Property Name="RadiusMax" Type="Real64" Value="20"/>
+						<Property Name="RadiusMax" Type="Real64" Value="15"/>
 					</PropertyList>
 					<CurveUsageInfoList>
 						<VolumeDryUsage>
@@ -90,12 +90,12 @@
 											<Flags>5</Flags>
 										</Point>
 										<Point>
-											<XPos>6.40703</XPos>
-											<YPos>-8.59925</YPos>
+											<XPos>5.97361</XPos>
+											<YPos>-11.99838</YPos>
 											<Flags>0</Flags>
 										</Point>
 										<Point>
-											<XPos>20</XPos>
+											<XPos>15</XPos>
 											<YPos>-200</YPos>
 											<Flags>37</Flags>
 										</Point>
@@ -122,12 +122,12 @@
 											<Flags>5</Flags>
 										</Point>
 										<Point>
-											<XPos>9.974876</XPos>
+											<XPos>7.481157</XPos>
 											<YPos>11</YPos>
 											<Flags>0</Flags>
 										</Point>
 										<Point>
-											<XPos>20</XPos>
+											<XPos>15</XPos>
 											<YPos>51</YPos>
 											<Flags>37</Flags>
 										</Point>

@@ -16,7 +16,8 @@ namespace AK
         static const AkUniqueID BIRDS = 352130103U;
         static const AkUniqueID CAR = 983016381U;
         static const AkUniqueID FOOTSTEP = 1866025847U;
-        static const AkUniqueID RAIN = 2043403999U;
+        static const AkUniqueID JUMP = 3833651337U;
+        static const AkUniqueID LANDING = 2548270042U;
     } // namespace EVENTS
 
     namespace SWITCHES
@@ -27,6 +28,7 @@ namespace AK
 
             namespace SWITCH
             {
+                static const AkUniqueID GRASS = 4248645337U;
                 static const AkUniqueID MUDD = 3242545539U;
                 static const AkUniqueID NORMAL = 1160234136U;
             } // namespace SWITCH
@@ -45,6 +47,11 @@ namespace AK
     {
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
     } // namespace BUSSES
+
+    namespace AUX_BUSSES
+    {
+        static const AkUniqueID REVERB = 348963605U;
+    } // namespace AUX_BUSSES
 
     namespace AUDIO_DEVICES
     {

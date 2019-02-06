@@ -31,20 +31,6 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Rain" ID="{ECFD19D2-76C3-4CF3-A057-F47D6EE5369F}">
-					<ChildrenList>
-						<Action Name="" ID="{C0DC6595-9751-46A4-B192-D02C1D807FA9}" ShortID="825004263">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="1"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Rain" ID="{60D1CDD9-7E83-4976-A0BE-FC4BAE9601E8}" WorkUnitID="{356AD583-FC0A-4A88-B4E1-0947DB580537}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
 				<Event Name="Birds" ID="{CA8553F5-D7F3-4718-A1D0-C51B3799B128}">
 					<ChildrenList>
 						<Action Name="" ID="{03F12CDD-671A-443E-817D-951C7780439C}" ShortID="479535878">
@@ -53,7 +39,56 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Birds" ID="{470D7978-137A-4E65-AABF-A4523D8174C2}" WorkUnitID="{356AD583-FC0A-4A88-B4E1-0947DB580537}"/>
+									<ObjectRef Name="Birds_Container" ID="{EAF630E8-3F6B-45D3-8080-78E03B8F4453}" WorkUnitID="{356AD583-FC0A-4A88-B4E1-0947DB580537}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Jump" ID="{FCA42E43-5E28-4570-8284-EFAAEDFF9871}">
+					<ChildrenList>
+						<Action Name="" ID="{DF2EDB10-3B48-40FC-B408-B19834D78738}" ShortID="80677463">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Footsteps_Jump" ID="{543B7F07-33AE-4150-8E4D-BF6E841C403F}" WorkUnitID="{356AD583-FC0A-4A88-B4E1-0947DB580537}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{3DCD224D-2E2F-4C78-92DF-D107313BEAE1}" ShortID="341957832">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="4"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Footsteps" ID="{35C0BA4A-6EDB-41B9-B7DE-0B638627AC84}" WorkUnitID="{356AD583-FC0A-4A88-B4E1-0947DB580537}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Landing" ID="{79D51E84-EBBF-4E89-B7A7-4B39A2549415}">
+					<ChildrenList>
+						<Action Name="" ID="{C7EC4A6A-37C3-4303-83F7-B36A692C344A}" ShortID="966190957">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Footsteps_Landing" ID="{A1B3D182-A306-4A9F-BE6F-C9A734F76D1B}" WorkUnitID="{356AD583-FC0A-4A88-B4E1-0947DB580537}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{E678DC37-42C6-4D57-B1DE-8054627B85FE}" ShortID="103722054">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="5"/>
+								<Property Name="Delay" Type="Real64" Value="0.1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Footsteps" ID="{35C0BA4A-6EDB-41B9-B7DE-0B638627AC84}" WorkUnitID="{356AD583-FC0A-4A88-B4E1-0947DB580537}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
