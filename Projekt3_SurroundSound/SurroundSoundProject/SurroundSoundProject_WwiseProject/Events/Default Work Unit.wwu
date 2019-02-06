@@ -1,17 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{DFEEA4E4-611E-44CD-8A11-8C87CE0197B4}" SchemaVersion="89">
+<WwiseDocument Type="WorkUnit" ID="{5A6925DC-B356-4554-9838-AE1E159643B0}" SchemaVersion="89">
 	<Events>
-		<WorkUnit Name="Default Work Unit" ID="{DFEEA4E4-611E-44CD-8A11-8C87CE0197B4}" PersistMode="Standalone">
+		<WorkUnit Name="Default Work Unit" ID="{5A6925DC-B356-4554-9838-AE1E159643B0}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="Footstep" ID="{6D3D668C-548C-4845-B977-241B5CF503A1}">
+				<Event Name="Footstep" ID="{830D556A-2054-4240-8968-6E926923ACE6}">
 					<ChildrenList>
-						<Action Name="" ID="{F4C3C029-05C6-485A-804C-970922006294}" ShortID="1040693444">
+						<Action Name="" ID="{6F4DD7AA-5940-4E8A-BFF9-06D038234292}" ShortID="780092528">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Footstep01" ID="{2CB49041-5B48-4926-ABA0-FCF5F38A6012}" WorkUnitID="{876C5FE3-5924-4614-A934-FEE8B2D072B6}"/>
+									<ObjectRef Name="Footsteps" ID="{35C0BA4A-6EDB-41B9-B7DE-0B638627AC84}" WorkUnitID="{356AD583-FC0A-4A88-B4E1-0947DB580537}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Car" ID="{92BA7A7D-BBBF-4069-866C-BD356D2C4C52}">
+					<ChildrenList>
+						<Action Name="" ID="{041D88BA-4888-42CC-9679-1DE2C3092B2F}" ShortID="811319813">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Car" ID="{540F9139-46F2-4339-9060-CD7C7813ED31}" WorkUnitID="{356AD583-FC0A-4A88-B4E1-0947DB580537}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Rain" ID="{ECFD19D2-76C3-4CF3-A057-F47D6EE5369F}">
+					<ChildrenList>
+						<Action Name="" ID="{C0DC6595-9751-46A4-B192-D02C1D807FA9}" ShortID="825004263">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Rain" ID="{60D1CDD9-7E83-4976-A0BE-FC4BAE9601E8}" WorkUnitID="{356AD583-FC0A-4A88-B4E1-0947DB580537}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Birds" ID="{CA8553F5-D7F3-4718-A1D0-C51B3799B128}">
+					<ChildrenList>
+						<Action Name="" ID="{03F12CDD-671A-443E-817D-951C7780439C}" ShortID="479535878">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Birds" ID="{470D7978-137A-4E65-AABF-A4523D8174C2}" WorkUnitID="{356AD583-FC0A-4A88-B4E1-0947DB580537}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

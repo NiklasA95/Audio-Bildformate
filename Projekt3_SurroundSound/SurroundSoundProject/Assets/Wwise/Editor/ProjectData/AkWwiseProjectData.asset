@@ -8,29 +8,38 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb418ff17eb91ec4285a62b8a7fa4bef, type: 3}
+  m_Script: {fileID: 11500000, guid: 06d2127472c119a4b9f1ce7660211c24, type: 3}
   m_Name: AkWwiseProjectData
   m_EditorClassIdentifier: 
   AcousticTextureWwu:
   - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
     ParentPhysicalPath: 
-    guid: 3488aac9e851fb4a92ee1da3968af60a
-    m_lastTime: -8586523302074480258
+    guid: 7d0d64fc37ac564bbb8b88aef792d7e0
+    m_lastTime: -8586522066992685290
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
-    guid: 8ad47792397b714bb78384bcf02032bb
-    m_lastTime: -8586523302075139883
+    guid: 4cd2d839b796af4ea5313296c1fddc61
+    m_lastTime: -8586522066993354912
     List: []
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
-    guid: 27c2d80cc7d0e54eb616438ab812287f
-    m_lastTime: -8586523288576207172
+    guid: 6b1014648b0a1f42908dfd079ed16958
+    m_lastTime: -8586521944380578224
     List:
+    - name: Ambient
+      guid: f6bdd26538ed564fbff91ba5afcceb49
+      id: 77978275
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Ambient
+        ObjectType: 7
+      Path: Default Work Unit\Ambient
     - name: Footsteps
-      guid: a2f2164db31e6d498af85b233f9db217
+      guid: 58726fcb7df4274ca987bd6a4f333be5
       id: 2385628198
       PathAndIcons:
       - ElementName: Default Work Unit
@@ -41,35 +50,107 @@ MonoBehaviour:
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
-    guid: e4a4eedf1e61cd448a118c87ce0197b4
-    m_lastTime: -8586523302075289793
-    List: []
+    guid: dc25695a56b354459838ae1e159643b0
+    m_lastTime: -8586521944380458475
+    List:
+    - name: Birds
+      guid: f55385caf3d71847a1d0c51b3799b128
+      id: 352130103
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Birds
+        ObjectType: 3
+      Path: Default Work Unit\Birds
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Car
+      guid: 7d7aba92bfbb6940866cbd356d2c4c52
+      id: 983016381
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Car
+        ObjectType: 3
+      Path: Default Work Unit\Car
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Footstep
+      guid: 6a550d835420404289686e926923ace6
+      id: 1866025847
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Footstep
+        ObjectType: 3
+      Path: Default Work Unit\Footstep
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Rain
+      guid: d219fdecc376f34ca057f47d6ee5369f
+      id: 2043403999
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Rain
+        ObjectType: 3
+      Path: Default Work Unit\Rain
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
-    guid: 6625b5aa95bfdf48a20da4f116423360
-    m_lastTime: -8586523302075249821
+    guid: cab5b22fb043c245a28a98e30628bf48
+    m_lastTime: -8586522066993434848
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
-    guid: a61f5737dea12e46856550623a416383
-    m_lastTime: -8586523302074630174
+    guid: 40c8b4595a7d1b4792184171e1d0a782
+    m_lastTime: -8586522066993035091
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPhysicalPath: 
-    guid: 74e601e733fdeb45a324a70528587da5
-    m_lastTime: -8586523302074520221
-    List: []
+    guid: 692f60fa286da54181fa26672867e7ed
+    m_lastTime: -8586521991364917485
+    List:
+    - name: Footsteps
+      guid: 0c4a4fb3de9b384aa2c866881ce2de36
+      id: 2385628198
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Footsteps
+        ObjectType: 11
+      Path: Default Work Unit\Footsteps
+      values:
+      - name: Mudd
+        guid: ac23f4a7478f83489d6af234dde55c08
+        id: 3242545539
+        PathAndIcons:
+        - ElementName: Mudd
+          ObjectType: 10
+      - name: Normal
+        guid: 2e09f7618d95804d970c958236d3bb39
+        id: 1160234136
+        PathAndIcons:
+        - ElementName: Normal
+          ObjectType: 10
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     ParentPhysicalPath: 
-    guid: 0ab6cc1006e4e4409952b88c4e06b7a4
-    m_lastTime: -8586523302074590197
+    guid: aa2d67c59493734c8977f8c3681e6a00
+    m_lastTime: -8586522066992995118
     List: []
   ExpandedItems:
   - /SurroundSoundProject_WwiseProject
+  - /SurroundSoundProject_WwiseProject/Events
+  - /SurroundSoundProject_WwiseProject/Events/Default Work Unit
   - /SurroundSoundProject_WwiseProject/SoundBanks
   - /SurroundSoundProject_WwiseProject/SoundBanks/Default Work Unit
   autoPopulateEnabled: 1

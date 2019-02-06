@@ -1,32 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="132">
 	<RootPaths>
-		<ProjectRoot>C:\Users\Niklas\Desktop\Uni\Audio- und Bildformate\Audio-Bildformate\Projekt3_SurroundSound\SurroundSoundProject\SurroundSoundProject_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>C:\Users\Niklas\Desktop\Uni\Audio- und Bildformate\Audio-Bildformate\Projekt3_SurroundSound\SurroundSoundProject\SurroundSoundProject_WwiseProject\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>C:\Users\Niklas\Desktop\Uni\Audio- und Bildformate\Audio-Bildformate\Projekt3_SurroundSound\SurroundSoundProject\SurroundSoundProject_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>C:\Users\Niklas\Desktop\Uni\Audio und Bildformate\Audio-Bildformate\Projekt3_SurroundSound\SurroundSoundProject\SurroundSoundProject_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\Niklas\Desktop\Uni\Audio und Bildformate\Audio-Bildformate\Projekt3_SurroundSound\SurroundSoundProject\SurroundSoundProject_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\Niklas\Desktop\Uni\Audio und Bildformate\Audio-Bildformate\Projekt3_SurroundSound\SurroundSoundProject\SurroundSoundProject_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>C:\Users\Niklas\Desktop\Uni\Audio- und Bildformate\Audio-Bildformate\Projekt3_SurroundSound\SurroundSoundProject\SurroundSoundProject_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>C:\Users\Niklas\Desktop\Uni\Audio und Bildformate\Audio-Bildformate\Projekt3_SurroundSound\SurroundSoundProject\SurroundSoundProject_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
+		<SoundBank Id="77978275" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\Ambient</ObjectPath>
+			<ShortName>Ambient</ShortName>
+			<Path>Ambient.bnk</Path>
+			<IncludedEvents>
+				<Event Id="352130103" Name="Birds" ObjectPath="\Events\Default Work Unit\Birds" MaxAttenuation="50.000000"/>
+				<Event Id="983016381" Name="Car" ObjectPath="\Events\Default Work Unit\Car" MaxAttenuation="20.000000"/>
+				<Event Id="2043403999" Name="Rain" ObjectPath="\Events\Default Work Unit\Rain" MaxAttenuation="50.000000"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="377326920" Language="SFX">
+					<ShortName>Birds.wav</ShortName>
+					<Path>SFX\Birds_8956FC97.wem</Path>
+				</File>
+				<File Id="494090980" Language="SFX">
+					<ShortName>Rain.wav</ShortName>
+					<Path>SFX\Rain_8956FC97.wem</Path>
+				</File>
+				<File Id="656027689" Language="SFX">
+					<ShortName>Car.wav</ShortName>
+					<Path>SFX\Car_8956FC97.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
 		<SoundBank Id="1355168291" Language="SFX">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="1866025847" Language="SFX">
-			<ObjectPath>\SoundBanks\Default Work Unit\Footstep</ObjectPath>
-			<ShortName>Footstep</ShortName>
-			<Path>Footstep.bnk</Path>
+		<SoundBank Id="2385628198" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\Footsteps</ObjectPath>
+			<ShortName>Footsteps</ShortName>
+			<Path>Footsteps.bnk</Path>
 			<IncludedEvents>
 				<Event Id="1866025847" Name="Footstep" ObjectPath="\Events\Default Work Unit\Footstep"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
-				<File Id="974724905" Language="SFX">
-					<ShortName>Footstep01.wav</ShortName>
-					<Path>SFX\Footstep01_56D34C19.wem</Path>
+				<File Id="81525172" Language="SFX">
+					<ShortName>Footsteps\Mudd\Footstep_mudd10.wav</ShortName>
+					<Path>SFX\Footsteps\Mudd\Footstep_mudd10_56D34C19.wem</Path>
+				</File>
+				<File Id="189362204" Language="SFX">
+					<ShortName>Footsteps\Normal\Footstep02.wav</ShortName>
+					<Path>SFX\Footsteps\Normal\Footstep02_56D34C19.wem</Path>
+				</File>
+				<File Id="397941494" Language="SFX">
+					<ShortName>Footsteps\Mudd\Footstep_mudd06.wav</ShortName>
+					<Path>SFX\Footsteps\Mudd\Footstep_mudd06_56D34C19.wem</Path>
+				</File>
+				<File Id="600642423" Language="SFX">
+					<ShortName>Footsteps\Mudd\Footstep_mudd12.wav</ShortName>
+					<Path>SFX\Footsteps\Mudd\Footstep_mudd12_56D34C19.wem</Path>
+				</File>
+				<File Id="608524056" Language="SFX">
+					<ShortName>Footsteps\Mudd\Footstep_mudd08.wav</ShortName>
+					<Path>SFX\Footsteps\Mudd\Footstep_mudd08_56D34C19.wem</Path>
+				</File>
+				<File Id="650846345" Language="SFX">
+					<ShortName>Footsteps\Mudd\Footstep_mudd03.wav</ShortName>
+					<Path>SFX\Footsteps\Mudd\Footstep_mudd03_56D34C19.wem</Path>
+				</File>
+				<File Id="684795072" Language="SFX">
+					<ShortName>Footsteps\Normal\Footstep04.wav</ShortName>
+					<Path>SFX\Footsteps\Normal\Footstep04_56D34C19.wem</Path>
+				</File>
+				<File Id="705401548" Language="SFX">
+					<ShortName>Footsteps\Normal\Footstep01.wav</ShortName>
+					<Path>SFX\Footsteps\Normal\Footstep01_56D34C19.wem</Path>
+				</File>
+				<File Id="793256309" Language="SFX">
+					<ShortName>Footsteps\Mudd\Footstep_mudd09.wav</ShortName>
+					<Path>SFX\Footsteps\Mudd\Footstep_mudd09_56D34C19.wem</Path>
+				</File>
+				<File Id="860380795" Language="SFX">
+					<ShortName>Footsteps\Mudd\Footstep_mudd01.wav</ShortName>
+					<Path>SFX\Footsteps\Mudd\Footstep_mudd01_56D34C19.wem</Path>
+				</File>
+				<File Id="877207930" Language="SFX">
+					<ShortName>Footsteps\Mudd\Footstep_mudd05.wav</ShortName>
+					<Path>SFX\Footsteps\Mudd\Footstep_mudd05_56D34C19.wem</Path>
+				</File>
+				<File Id="922170452" Language="SFX">
+					<ShortName>Footsteps\Mudd\Footstep_mudd11.wav</ShortName>
+					<Path>SFX\Footsteps\Mudd\Footstep_mudd11_56D34C19.wem</Path>
+				</File>
+				<File Id="993478813" Language="SFX">
+					<ShortName>Footsteps\Normal\Footstep03.wav</ShortName>
+					<Path>SFX\Footsteps\Normal\Footstep03_56D34C19.wem</Path>
+				</File>
+				<File Id="1000586126" Language="SFX">
+					<ShortName>Footsteps\Mudd\Footstep_mudd02.wav</ShortName>
+					<Path>SFX\Footsteps\Mudd\Footstep_mudd02_56D34C19.wem</Path>
+				</File>
+				<File Id="1047584069" Language="SFX">
+					<ShortName>Footsteps\Mudd\Footstep_mudd04.wav</ShortName>
+					<Path>SFX\Footsteps\Mudd\Footstep_mudd04_56D34C19.wem</Path>
+				</File>
+				<File Id="1070227296" Language="SFX">
+					<ShortName>Footsteps\Mudd\Footstep_mudd07.wav</ShortName>
+					<Path>SFX\Footsteps\Mudd\Footstep_mudd07_56D34C19.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

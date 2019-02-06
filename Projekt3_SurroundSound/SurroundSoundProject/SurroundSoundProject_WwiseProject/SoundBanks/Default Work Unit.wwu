@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{0CD8C227-D0C7-4EE5-B616-438AB812287F}" SchemaVersion="89">
+<WwiseDocument Type="WorkUnit" ID="{6414106B-0A8B-421F-908D-FD079ED16958}" SchemaVersion="89">
 	<SoundBanks>
-		<WorkUnit Name="Default Work Unit" ID="{0CD8C227-D0C7-4EE5-B616-438AB812287F}" PersistMode="Standalone">
+		<WorkUnit Name="Default Work Unit" ID="{6414106B-0A8B-421F-908D-FD079ED16958}" PersistMode="Standalone">
 			<ChildrenList>
-				<SoundBank Name="Footstep" ID="{4D16F2A2-1EB3-496D-8AF8-5B233F9DB217}">
+				<SoundBank Name="Footsteps" ID="{CB6F7258-F47D-4C27-A987-BD6A4F333BE5}">
 					<ObjectInclusionList>
-						<ObjectRef Name="Footstep" ID="{6D3D668C-548C-4845-B977-241B5CF503A1}" WorkUnitID="{DFEEA4E4-611E-44CD-8A11-8C87CE0197B4}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Footstep" ID="{830D556A-2054-4240-8968-6E926923ACE6}" WorkUnitID="{5A6925DC-B356-4554-9838-AE1E159643B0}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="Ambient" ID="{65D2BDF6-ED38-4F56-BFF9-1BA5AFCCEB49}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Car" ID="{92BA7A7D-BBBF-4069-866C-BD356D2C4C52}" WorkUnitID="{5A6925DC-B356-4554-9838-AE1E159643B0}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Birds" ID="{CA8553F5-D7F3-4718-A1D0-C51B3799B128}" WorkUnitID="{5A6925DC-B356-4554-9838-AE1E159643B0}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Rain" ID="{ECFD19D2-76C3-4CF3-A057-F47D6EE5369F}" WorkUnitID="{5A6925DC-B356-4554-9838-AE1E159643B0}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

@@ -1,6 +1,0 @@
-Event	ID	Name			Wwise Object Path	Notes
-	1866025847	Footstep			\Default Work Unit\Footstep	
-
-In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	974724905	Footstep01	C:\Users\Niklas\Desktop\Uni\Audio- und Bildformate\Audio-Bildformate\Projekt3_SurroundSound\SurroundSoundProject\SurroundSoundProject_WwiseProject\.cache\Windows\SFX\Footstep01_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footstep01		48056
-

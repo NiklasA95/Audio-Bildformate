@@ -1,0 +1,28 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1866025847	Footstep			\Default Work Unit\Footstep	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	2385628198	Footsteps			\Default Work Unit\Footsteps	
+
+Switch	ID	Name	Switch Group			Notes
+	1160234136	Normal	Footsteps			
+	3242545539	Mudd	Footsteps			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	81525172	Footstep_mudd10	C:\Users\Niklas\Desktop\Uni\Audio und Bildformate\Audio-Bildformate\Projekt3_SurroundSound\SurroundSoundProject\SurroundSoundProject_WwiseProject\.cache\Mac\SFX\Footsteps\Mudd\Footstep_mudd10_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Mudd\Footstep_mudd10		77648
+	189362204	Footstep02	C:\Users\Niklas\Desktop\Uni\Audio und Bildformate\Audio-Bildformate\Projekt3_SurroundSound\SurroundSoundProject\SurroundSoundProject_WwiseProject\.cache\Mac\SFX\Footsteps\Normal\Footstep02_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Normal\Footstep02		49736
+	397941494	Footstep_mudd06	C:\Users\Niklas\Desktop\Uni\Audio und Bildformate\Audio-Bildformate\Projekt3_SurroundSound\SurroundSoundProject\SurroundSoundProject_WwiseProject\.cache\Mac\SFX\Footsteps\Mudd\Footstep_mudd06_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Mudd\Footstep_mudd06		88732
+	600642423	Footstep_mudd12	C:\Users\Niklas\Desktop\Uni\Audio und Bildformate\Audio-Bildformate\Projekt3_SurroundSound\SurroundSoundProject\SurroundSoundProject_WwiseProject\.cache\Mac\SFX\Footsteps\Mudd\Footstep_mudd12_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Mudd\Footstep_mudd12		99812
+	608524056	Footstep_mudd08	C:\Users\Niklas\Desktop\Uni\Audio und Bildformate\Audio-Bildformate\Projekt3_SurroundSound\SurroundSoundProject\SurroundSoundProject_WwiseProject\.cache\Mac\SFX\Footsteps\Mudd\Footstep_mudd08_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Mudd\Footstep_mudd08		77648
+	650846345	Footstep_mudd03	C:\Users\Niklas\Desktop\Uni\Audio und Bildformate\Audio-Bildformate\Projekt3_SurroundSound\SurroundSoundProject\SurroundSoundProject_WwiseProject\.cache\Mac\SFX\Footsteps\Mudd\Footstep_mudd03_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Mudd\Footstep_mudd03		72108
+	684795072	Footstep04	C:\Users\Niklas\Desktop\Uni\Audio und Bildformate\Audio-Bildformate\Projekt3_SurroundSound\SurroundSoundProject\SurroundSoundProject_WwiseProject\.cache\Mac\SFX\Footsteps\Normal\Footstep04_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Normal\Footstep04		38368
+	705401548	Footstep01	C:\Users\Niklas\Desktop\Uni\Audio und Bildformate\Audio-Bildformate\Projekt3_SurroundSound\SurroundSoundProject\SurroundSoundProject_WwiseProject\.cache\Mac\SFX\Footsteps\Normal\Footstep01_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Normal\Footstep01		48056
+	793256309	Footstep_mudd09	C:\Users\Niklas\Desktop\Uni\Audio und Bildformate\Audio-Bildformate\Projekt3_SurroundSound\SurroundSoundProject\SurroundSoundProject_WwiseProject\.cache\Mac\SFX\Footsteps\Mudd\Footstep_mudd09_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Mudd\Footstep_mudd09		94272
+	860380795	Footstep_mudd01	C:\Users\Niklas\Desktop\Uni\Audio und Bildformate\Audio-Bildformate\Projekt3_SurroundSound\SurroundSoundProject\SurroundSoundProject_WwiseProject\.cache\Mac\SFX\Footsteps\Mudd\Footstep_mudd01_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Mudd\Footstep_mudd01		72104
+	877207930	Footstep_mudd05	C:\Users\Niklas\Desktop\Uni\Audio und Bildformate\Audio-Bildformate\Projekt3_SurroundSound\SurroundSoundProject\SurroundSoundProject_WwiseProject\.cache\Mac\SFX\Footsteps\Mudd\Footstep_mudd05_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Mudd\Footstep_mudd05		99812
+	922170452	Footstep_mudd11	C:\Users\Niklas\Desktop\Uni\Audio und Bildformate\Audio-Bildformate\Projekt3_SurroundSound\SurroundSoundProject\SurroundSoundProject_WwiseProject\.cache\Mac\SFX\Footsteps\Mudd\Footstep_mudd11_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Mudd\Footstep_mudd11		72104
+	993478813	Footstep03	C:\Users\Niklas\Desktop\Uni\Audio und Bildformate\Audio-Bildformate\Projekt3_SurroundSound\SurroundSoundProject\SurroundSoundProject_WwiseProject\.cache\Mac\SFX\Footsteps\Normal\Footstep03_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Normal\Footstep03		52872
+	1000586126	Footstep_mudd02	C:\Users\Niklas\Desktop\Uni\Audio und Bildformate\Audio-Bildformate\Projekt3_SurroundSound\SurroundSoundProject\SurroundSoundProject_WwiseProject\.cache\Mac\SFX\Footsteps\Mudd\Footstep_mudd02_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Mudd\Footstep_mudd02		94272
+	1047584069	Footstep_mudd04	C:\Users\Niklas\Desktop\Uni\Audio und Bildformate\Audio-Bildformate\Projekt3_SurroundSound\SurroundSoundProject\SurroundSoundProject_WwiseProject\.cache\Mac\SFX\Footsteps\Mudd\Footstep_mudd04_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Mudd\Footstep_mudd04		55484
+	1070227296	Footstep_mudd07	C:\Users\Niklas\Desktop\Uni\Audio und Bildformate\Audio-Bildformate\Projekt3_SurroundSound\SurroundSoundProject\SurroundSoundProject_WwiseProject\.cache\Mac\SFX\Footsteps\Mudd\Footstep_mudd07_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Mudd\Footstep_mudd07		61020
+
